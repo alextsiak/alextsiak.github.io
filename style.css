@@ -4,8 +4,8 @@
    ============================================ */
 :root {
   --bg: #131B2B;      
-  --fg: #E8E3D5;      
-  --accent: #2F4A63; 
+  --fg: #2F4A63;      
+  --accent: #E8E3D5; 
 }
 
 * { box-sizing: border-box; }
