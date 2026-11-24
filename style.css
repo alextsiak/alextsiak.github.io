@@ -18,7 +18,7 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: "VT323", ui-monospace, monospace;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.3;
 }
 
