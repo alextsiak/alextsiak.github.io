@@ -1,12 +1,12 @@
-
 /* ============================================
-   Colours — change these three to re-theme the whole site
+   Colours — change these to re-theme the whole site
    ============================================ */
 :root {
-  --bg: #131B2B;      
-  --fg: #E8E3D5;      
-  --accent: #2F4A63; 
-  --link: #C9D3E6;
+  --bg: #131B2B;      /* background */
+  --fg: #E8E3D5;      /* main text */
+  --accent: #7FA3C7;  /* headings */
+  --link: #C9D3E6;    /* links */
+  --line: #2F4A63;    /* lines and dividers */
 }
 
 * { box-sizing: border-box; }
@@ -35,6 +35,9 @@ main {
   gap: 28px;
 }
 
+/* Closing line at the bottom of every page */
+main::after { content: ""; border-top: 1px solid var(--line); margin-top: 24px; }
+
 h1 {
   margin: 0;
   font-weight: 400;
@@ -51,13 +54,29 @@ i { font-style: italic; }
 .accent { color: var(--accent); }
 .indent { padding-left: 24px; }
 
+/* Home page: name and position, with a line underneath */
+.intro { border-bottom: 1px solid var(--line); padding-bottom: 20px; }
+.intro div { margin-top: 6px; }
+
 /* Lists of items (research topics, publications) */
 .list { display: flex; flex-direction: column; gap: 12px; }
 .topics { display: flex; flex-direction: column; gap: 20px; }
 
-/* Page links at the top of each inner page */
-.links { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0 0 24px -4px; }
+/* Dashed lines between research topics and between papers */
+.topics > div + div,
+.list p + p { border-top: 1px dashed var(--line); padding-top: 12px; }
+
+/* Page links at the top of each inner page, with a line underneath */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: 0 0 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
 .links a, .links span { padding: 0 4px; }
+.links > :first-child { margin-left: -4px; }
 .links span { color: var(--fg); text-decoration: underline; text-underline-offset: 4px; }
 
 /* Home page menu */
