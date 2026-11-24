@@ -4,9 +4,9 @@
    ============================================ */
 :root {
   --bg: #131B2B;      
-  --fg: #2F4A63;      
-  --accent: #CFEAE0; 
-  --link: #7FD8BE;
+  --fg: #E8E3D5;      
+  --accent: #2F4A63; 
+  --link: #C9D3E6;
 }
 
 * { box-sizing: border-box; }
