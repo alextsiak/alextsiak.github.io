@@ -3,9 +3,9 @@
    Colours — change these three to re-theme the whole site
    ============================================ */
 :root {
-  --bg: #131B2B;      /* DOS blue */
-  --fg: #AAAAAA;      /* light grey text */
-  --accent: #2F4A63;  /* yellow highlights */
+  --bg: #131B2B;      
+  --fg: #E8E3D5;      
+  --accent: #2F4A63; 
 }
 
 * { box-sizing: border-box; }
