@@ -1,1 +1,85 @@
 
+/* ============================================
+   Colours — change these three to re-theme the whole site
+   ============================================ */
+:root {
+  --bg: #131B2B;      /* DOS blue */
+  --fg: #AAAAAA;      /* light grey text */
+  --accent: #2F4A63;  /* yellow highlights */
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "VT323", ui-monospace, monospace;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover, a:focus-visible { background: var(--fg); color: var(--bg); outline: none; }
+
+/* Page content */
+main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 72px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--accent);
+}
+.home h1 { font-size: 64px; }
+
+h2 { margin: 0; font-size: inherit; font-weight: 400; color: var(--accent); }
+p { margin: 0; }
+i { font-style: italic; }
+
+.accent { color: var(--accent); }
+.indent { padding-left: 24px; }
+
+/* Lists of items (research topics, publications) */
+.list { display: flex; flex-direction: column; gap: 12px; }
+.topics { display: flex; flex-direction: column; gap: 20px; }
+
+/* Page links at the top of each inner page */
+.links { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0 0 24px -4px; }
+.links a, .links span { padding: 0 4px; }
+.links span { color: var(--fg); text-decoration: underline; text-underline-offset: 4px; }
+
+/* Home page menu */
+.menu { display: flex; flex-direction: column; align-items: flex-start; padding-left: 24px; }
+.menu a { padding: 0 6px; }
+
+/* Two-column rows: CV dates, contact details */
+.table {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 4px 16px;
+}
+.table a { justify-self: start; }
+.section { display: flex; flex-direction: column; gap: 8px; }
+
+/* Phones */
+@media (max-width: 600px) {
+  body { font-size: 20px; }
+  main { padding: 40px 16px; gap: 24px; }
+  h1 { font-size: 40px; }
+  .home h1 { font-size: 48px; }
+  .table { grid-template-columns: 1fr; gap: 0; }
+  .table > :nth-child(even) { margin-bottom: 10px; }
+  .indent, .menu { padding-left: 12px; }
+  .links { margin-bottom: 8px; }
+}
